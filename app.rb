@@ -1,9 +1,8 @@
-require 'pry-byebug'
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary_vowels = %w[a e i o u y]
 
 def substrings(string, dictionary)
     string.downcase!
-    binding.pry
     tallies_hash = Hash.new(0)
     dictionary.each do |word|
         tallies_hash[word] += string.scan(/(?=#{word})/).count
@@ -15,3 +14,4 @@ puts "Enter a string:"
 string = gets.chomp
 
 puts substrings(string, dictionary)
+puts substrings(string, dictionary_vowels)
