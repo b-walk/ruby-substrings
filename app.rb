@@ -13,5 +13,5 @@ end
 puts "Enter a string:"
 string = gets.chomp
 
-puts substrings(string, dictionary)
-puts substrings(string, dictionary_vowels)
+puts "Odin Dictionary: #{substrings(string, dictionary)}"
+puts "Vowels: #{substrings(string, dictionary_vowels)}"
